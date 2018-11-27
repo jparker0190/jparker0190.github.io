@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "Simple Ruby on Rails Website "
-date:       2018-09-10 17:46:32 +0000
+title:      "Portfolio MGMT (Rails Walkthrough) "
+date:       2018-09-10 13:46:33 -0400
 permalink:  simple_ruby_on_rails_website
 ---
 
@@ -12,9 +12,7 @@ The first task was to create a login/signup form...to make this process less pai
 
 The next step was to set up the index/new/edit pages that the user would see when they login in to the site. The home page will display the current user's portfolio and all of the stocks that were added by the user. Currently these stock entries are static and the price only reflects what is entered by the user... the next version of this app will track real-time prices. IEX has a nice api that can be used to track the prices of stocks...it's free too!
 
-The new/edit pages were very straight forward. All they do is allow the user to add a new stock to the portfolio you must enter the ticker,sector, high-low and current price manually for now but I am going to change this to be dynamic in the future. 
-
-That is about it as far as the functionality of the site it is very barebones. 
+After that I needed to set up a bridge between stocks and portfolios so i decided to use assignments as that bridge. So the associations would be as follows Assignment belongs_to Stock and Portfolio and a Portfolio has_many stocks thru assignments and vice versa. Allowing the user to add and delete stocks to their portfolios and the beauty of using rails a lot of this was set up fairly quickly once i had the associations built correctly. After that the bulk of time spent on this app was setting up the sytling, which I used the framework bootstrap to make it look pleasing and like I said the idea was to create a barebones app that I could scale to be more dynamic. 
 
 
 
